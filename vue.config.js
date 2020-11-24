@@ -2,10 +2,12 @@ module.exports = {
     devServer: {
         proxy:{
             '/api':{
-                target:'',
+                target:'https://www.wumeili.top',
                 changeOrigin: true,
                 secure: false,
-                path
+                pathRewrite:{
+                    '^api' : 'https://www.wumeili.top'
+                }
             }
         }
     }
