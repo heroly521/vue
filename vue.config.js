@@ -2,11 +2,11 @@ module.exports = {
     devServer: {
         proxy:{
             '/api':{
-                target:'https://www.wumeili.top',
+                target:'http://192.168.1.103:3030',
                 changeOrigin: true,
                 secure: false,
                 pathRewrite:{
-                    '^api' : 'https://www.wumeili.top'
+                    '^/api' : 'http://192.168.1.103:3030'
                 }
             }
         }
